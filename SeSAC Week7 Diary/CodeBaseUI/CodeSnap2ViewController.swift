@@ -26,7 +26,7 @@ class CodeSnap2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .black
+        view.backgroundColor = .white
         
         configureUI()
         
@@ -41,13 +41,18 @@ class CodeSnap2ViewController: UIViewController {
         
         redView.snp.makeConstraints { make in
             make.width.equalTo(200)
-            make.width.equalTo(200)
+            make.height.equalTo(200)
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.centerX.equalTo(view)
         }
         
         blackView.snp.makeConstraints { make in
-            make.edges.equalTo(redView).offset(50) // inset
+            make.edges.equalTo(redView).inset(50) // offset
+        }
+        
+        yellowView.snp.makeConstraints { make in
+            make.width.equalTo(100)
+            make.height.equalTo(100)
         }
         
     }
