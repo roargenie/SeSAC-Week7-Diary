@@ -11,7 +11,6 @@
 		F69EE49028AC81B3001A3E36 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F69EE48F28AC81B3001A3E36 /* SnapKit */; };
 		F69EE49228AC822F001A3E36 /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EE49128AC822F001A3E36 /* CodeSnapViewController.swift */; };
 		F69EE49428AC8C0E001A3E36 /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EE49328AC8C0E001A3E36 /* CodeSnap2ViewController.swift */; };
-		F69EE49728AC91F8001A3E36 /* SnpakitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EE49628AC91F8001A3E36 /* SnpakitViewController.swift */; };
 		F6AA18C228AB1FCA00F1876D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA18C128AB1FCA00F1876D /* AppDelegate.swift */; };
 		F6AA18C428AB1FCA00F1876D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA18C328AB1FCA00F1876D /* SceneDelegate.swift */; };
 		F6AA18C628AB1FCA00F1876D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA18C528AB1FCA00F1876D /* ViewController.swift */; };
@@ -62,7 +61,6 @@
 		F69EE48C28AC71BC001A3E36 /* CodeBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBaseViewController.swift; sourceTree = "<group>"; };
 		F69EE49128AC822F001A3E36 /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
 		F69EE49328AC8C0E001A3E36 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
-		F69EE49628AC91F8001A3E36 /* SnpakitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnpakitViewController.swift; sourceTree = "<group>"; };
 		F6AA18BE28AB1FCA00F1876D /* SeSAC Week7 Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeSAC Week7 Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA18C128AB1FCA00F1876D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6AA18C328AB1FCA00F1876D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				F69EE48C28AC71BC001A3E36 /* CodeBaseViewController.swift */,
 				F69EE49128AC822F001A3E36 /* CodeSnapViewController.swift */,
 				F69EE49328AC8C0E001A3E36 /* CodeSnap2ViewController.swift */,
-				F69EE49628AC91F8001A3E36 /* SnpakitViewController.swift */,
 			);
 			path = CodeBaseUI;
 			sourceTree = "<group>";
@@ -276,7 +273,6 @@
 				F69EE48D28AC71BC001A3E36 /* CodeBaseViewController.swift in Sources */,
 				F6AA18FB28AB40CC00F1876D /* ThirdViewController.swift in Sources */,
 				F6AA18FD28AB40F900F1876D /* WalkThroughViewController.swift in Sources */,
-				F69EE49728AC91F8001A3E36 /* SnpakitViewController.swift in Sources */,
 				F6AA18F728AB3A9600F1876D /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
