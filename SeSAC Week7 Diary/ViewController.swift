@@ -1,44 +1,72 @@
 
 import UIKit
 import SeSAC_Week7_UIFramework
-
-
+import SnapKit
 
 
 
 class ViewController: UIViewController {
     
-    var name = "고래밥"
-    
-    private var age = 22
+    let nameButton: UIButton = {
+        let view = UIButton()
+        view.setTitle("닉네임", for: .normal)
+        view.backgroundColor = .green
+        view.tintColor = .orange
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureUI()
+        
+        nameButton.addTarget(self, action: #selector(nameButtonTapped), for: .touchUpInside)
+        
+        // Notification 활용한 값전달 addObserver
+        NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationobserver), name: NSNotification.Name("saveButtonNotification"), object: nil)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        view.backgroundColor = .blue
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("Test"), object: nil)
         
-        let vc = CodeSnap2ViewController()
-        vc.modalPresentationStyle = .formSheet
+    }
+    
+    @objc func saveButtonNotificationobserver(notification: NSNotification) {
+        
+        if let name = notification.userInfo?["name"] as? String {
+            print(name)
+            self.nameButton.setTitle(name, for: .normal)
+        }
+        
+    }
+    
+    @objc func nameButtonTapped() {
+        
+        NotificationCenter.default.post(name: NSNotification.Name("Test"), object: nil, userInfo: ["name": "\(Int.random(in: 1...100))", "value": 123456])
+        
+        //let vc = WriteViewController()
+        let vc = ProfileViewController()
+
+        vc.saveButtonActionHandler = { value in
+            self.nameButton.setTitle(value, for: .normal)
+        }
+        
+        
         present(vc, animated: true)
-//        showAlert(title: "테스트", message: "테스트 메세지", buttonTitle: "변경") { _ in
-//            self.view.backgroundColor = .lightGray
-//        }
-//        let image = UIImage(systemName: "star.fill")!
-//        let shareURL = "https://www.apple.com"
-//        let text = "WWDC What's New!!!"
-//        sesacShowActivityViewController(shareImage: image, shareURL: shareURL, shareText: text)
+    }
+    
+    func configureUI() {
+        view.addSubview(nameButton)
         
-        OpenWebView.presentWebViewController(self, url: "https://www.naver.com", transitionStyle: .present)
+        nameButton.snp.makeConstraints { make in
+            make.width.height.equalTo(200)
+            make.center.equalTo(view)
+        }
         
     }
     
-    
-    
-    
-    
+     
 }
+
+
 
